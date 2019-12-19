@@ -1,0 +1,1248 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "ShipStation Developer Portal",
+        "description": "# Integrating with ShipStation\n\nShipStation strives to streamline shipping for online sellers, no matter where they sell their products online. We are continuously adding new marketplaces, shopping carts, and integration tools, because we know the e-commerce space is growing. \nAs a result, we\u2019ve worked hard to provide developer resources to build custom integrations with ShipStation.  If you\u2019re interested in becoming a partner of ours, drop us a line by [filling out this form](http:\/\/www.shipstation.com\/partners\/shipstation-api-custom-store\/) and we\u2019ll get in touch.\n\nThere are two methods to integrate with ShipStation:\n\n* Custom Store Integration\n\n* ShipStation API\n\n## Custom Store Integration\n\nLooking for a more 1-to-1 relationship between ShipStation and your chosen selling platform? The Custom Store Integration is the ticket. Our custom store integration is just like any of our other selling channel integration, and could be eligible (based on internal review) as a branded opt",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/ssapi.shipstation.com\/"
+    ],
+    "paths": {
+        "\/accounts\/listtags": {
+            "get": {
+                "summary": "List Tags",
+                "description": "Lists all tags defined for this account.",
+                "operationId": "AccountsListtagsGet",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/accounts\/registeraccount": {
+            "post": {
+                "summary": "Register Account",
+                "description": "Creates a new ShipStation account and generates an apiKey and apiSecret to be used by the newly created account. PLEASE NOTE: This endpoint does not require API key and API Secret credentials.  The Authorization header can be left off. Use of this specific endpoint requires approval, and is meant only for direct partners of ShipStation. This is the only endpoint to require approval. All other endpoints listed in this document can be accessed by submitting proper authorization credentials in the ",
+                "operationId": "AccountsRegisteraccountPost",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/carriers": {
+            "get": {
+                "summary": "List Carriers",
+                "description": "Lists all shipping providers connected to this account.",
+                "operationId": "CarriersGet",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/carriers\/addfunds": {
+            "post": {
+                "summary": "Add Funds",
+                "description": "Adds funds to a carrier account using the payment information on file. The body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n ``carrierCode`` | string, required |  The carrier to add funds to.\n ``amount`` | number, required | The dollar amount to add to the account.  The minimum value that can be added is $10.00.  The maximum value is $10,000.00.",
+                "operationId": "CarriersAddfundsPost",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/carriers\/getcarrier?carrierCode={carrierCode}": {
+            "get": {
+                "summary": "Get Carrier",
+                "description": "Retrieves the shipping carrier account details for the specified carrierCode. Use this method to determine a carrier's account balance.",
+                "operationId": "CarriersGetcarrierCarrierCodeCarrierCodeGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "carrierCode",
+                        "in": "path",
+                        "description": "The code for the carrier account to retrieve."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/carriers\/listpackages?carrierCode={carrierCode}": {
+            "get": {
+                "summary": "List Packages",
+                "description": "Retrieves a list of packages for the specified carrier",
+                "operationId": "CarriersListpackagesCarrierCodeCarrierCodeGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "carrierCode",
+                        "in": "path",
+                        "description": "The code for the carrier account to retrieve."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/carriers\/listservices?carrierCode={carrierCode}": {
+            "get": {
+                "summary": "List Services",
+                "description": "Retrieves the list of available shipping services provided by the specified carrier",
+                "operationId": "CarriersListservicesCarrierCodeCarrierCodeGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "carrierCode",
+                        "in": "path",
+                        "description": "The code for the carrier account to retrieve."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/customers\/{customerId}": {
+            "get": {
+                "summary": "Get Customer",
+                "description": "",
+                "operationId": "CustomersCustomerIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "customerId",
+                        "in": "path",
+                        "description": "The system generated identifier for the Customer."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/customers?stateCode={stateCode}&countryCode={countryCode}&tagId={tagId}&marketplaceId={marketplaceId}&sortBy={sortBy}&sortDir={sortDir}&page={page}&pageSize={pageSize}": {
+            "get": {
+                "summary": "List Customers",
+                "description": "Obtains a list of customers that match the specified criteria.",
+                "operationId": "CustomersStateCodeStateCodeCountryCodeCountryCodeTagIdTagIdMarketplaceIdMarketplaceIdSortBy",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "stateCode",
+                        "in": "path",
+                        "description": "Returns customers that reside in the specified stateCode."
+                    },
+                    {
+                        "name": "countryCode",
+                        "in": "path",
+                        "description": "Returns customers that reside in the specified countryCode."
+                    },
+                    {
+                        "name": "marketplaceId",
+                        "in": "path",
+                        "description": "Returns customers that purchased items from the specified marketplaceId."
+                    },
+                    {
+                        "name": "tagId",
+                        "in": "path",
+                        "description": "Returns customers that have been tagged with the specified tagId."
+                    },
+                    {
+                        "name": "sortBy",
+                        "in": "path",
+                        "description": "Sorts the order of the response based off the specified value."
+                    },
+                    {
+                        "name": "sortDir",
+                        "in": "path",
+                        "description": "Sets the direction of the sort order."
+                    },
+                    {
+                        "name": "page",
+                        "in": "path",
+                        "description": "Page number."
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "path",
+                        "description": "Requested page size. Max value is 500."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/fulfillments": {
+            "get": {
+                "summary": "List Fulfillments w\/o parameters",
+                "description": "",
+                "operationId": "FulfillmentsGet",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/fulfillments?fulfillmentId={fulfillmentId}&orderId={orderId}&orderNumber={orderNumber}&trackingNumber={trackingNumber}&recipientName={recipientName}&createDateStart={createDateStart}&createDateEnd={createDateEnd}&shipDateStart={shipDateStart}&shipDateEnd={shipDateEnd}&sortBy={sortBy}&sortDir={sortDir}&page={page}&pageSize={pageSize}": {
+            "get": {
+                "summary": "List Fulfillments with parameters",
+                "description": "Obtains a list of fulfillments that match the specified criteria.  Please note the following:\n\n- Orders that have been marked as shipped either through the UI or the API will appear in the response as they are considered fulfillments.\n\nAll of the available filters are optional.  They do not need to be included in the URL.  If you do include them, here's what the URL may look like:\n\nUrl format with filters:\n\n```\nfulfillments?fulfillmentId={fulfillmentId}\n&orderId={orderId}\n&orderNumber={orderNumb",
+                "operationId": "FulfillmentsFulfillmentIdFulfillmentIdOrderIdOrderIdOrderNumberOrderNumberTrackingNumberTrac",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "fulfillmentId",
+                        "in": "path",
+                        "description": "Returns the fulfillment with the specified fulfillment ID."
+                    },
+                    {
+                        "name": "orderId",
+                        "in": "path",
+                        "description": "Returns fulfillments whose orders have the specified order ID."
+                    },
+                    {
+                        "name": "orderNumber",
+                        "in": "path",
+                        "description": "Returns fulfillments whose orders have the specified order number."
+                    },
+                    {
+                        "name": "trackingNumber",
+                        "in": "path",
+                        "description": "Returns fulfillments with the specified tracking number."
+                    },
+                    {
+                        "name": "recipientName",
+                        "in": "path",
+                        "description": "Returns fulfillments shipped to the specified recipient name."
+                    },
+                    {
+                        "name": "createDateStart",
+                        "in": "path",
+                        "description": "Returns fulfillments created on or after the specified ``createDate``"
+                    },
+                    {
+                        "name": "createDateEnd",
+                        "in": "path",
+                        "description": "Returns fulfillments created on or before the specified ``createDate``"
+                    },
+                    {
+                        "name": "shipDateStart",
+                        "in": "path",
+                        "description": "Returns fulfillments with the ``shipDate`` on or after the specified date"
+                    },
+                    {
+                        "name": "shipDateEnd",
+                        "in": "path",
+                        "description": "Returns fulfillments with the ``shipDate`` on or before the specified date"
+                    },
+                    {
+                        "name": "sortBy",
+                        "in": "path",
+                        "description": "Sorts the order of the response based off the specified value."
+                    },
+                    {
+                        "name": "sortDir",
+                        "in": "path",
+                        "description": "Sets the direction of the sort order."
+                    },
+                    {
+                        "name": "page",
+                        "in": "path",
+                        "description": "Page number."
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "path",
+                        "description": "Requested page size. Max value is 500."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/orders": {
+            "get": {
+                "summary": "List Orders w\/o parameters",
+                "description": "",
+                "operationId": "OrdersGet",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/orders\/addtag": {
+            "post": {
+                "summary": "Add Tag to Order",
+                "description": "Adds a tag to an order.  The body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``orderId`` | number, required | Identifies the order that will be tagged.\n``tagId`` | number, required | Identifies the tag that will be applied to the order.",
+                "operationId": "OrdersAddtagPost",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/orders\/assignuser": {
+            "post": {
+                "summary": "Assign User to Order",
+                "description": "Assigns a user to an order.  The body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``orderIds`` | number, required | Identifies set of orders that will be assigned the user.  Please note that if ANY of the orders within the array are not found, no orders will have a user assigned to them.\n``userId`` | number, required | Identifies the user that will be applied to the order",
+                "operationId": "OrdersAssignuserPost",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/orders\/createlabelfororder": {
+            "post": {
+                "summary": "Create Label for Order",
+                "description": "Creates a shipping label for a given order.  The ``labelData`` field returned in the response is a base64 encoded PDF value. Simply decode and save the output as a PDF file to retrieve a printable label.  The body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``orderId`` | number, required | Identifies the order that will be shipped.\n``carrierCode`` | string, required | The",
+                "operationId": "OrdersCreatelabelfororderPost",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/orders\/createorder": {
+            "post": {
+                "summary": "Create\/Update Order",
+                "description": "If the ``orderKey`` is specified, the method becomes idempotent and the existing order with that key will be updated. Note: Only orders in an open status in ShipStation (``awaiting_payment``,``awaiting_shipment``, and ``on_hold``) can be updated through this method. ``cancelled`` and ``shipped`` are locked from modification through the API.  The body of this request should specify an [**Order**](https:\/\/www.shipstation.com\/developer-api\/#\/reference\/model-order) object:\n\nName               |Data ",
+                "operationId": "OrdersCreateorderPost",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/orders\/createorders": {
+            "post": {
+                "summary": "Create\/Update Multiple Orders",
+                "description": "This endpoint can be used to create or update multiple orders in one request. If the ``orderKey`` is specified in an order, the existing order with that key will be updated. Note: Only orders in an open status in ShipStation (``awaiting_payment``,``awaiting_shipment``, and ``on_hold``) can be updated through this method. ``cancelled`` and ``shipped`` are locked from modification through the API.\n\nData Type          |Description\n-------------------|-------------------\nOrder, required | An array o",
+                "operationId": "OrdersCreateordersPost",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/orders\/holduntil": {
+            "post": {
+                "summary": "Hold Order Until",
+                "description": "This method will change the status of the given order to On Hold until the date specified, when the status will automatically change to Awaiting Shipment.\n\nThe body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``orderId`` | number, required | Identifies the order that will be held.\n``holdUntilDate`` | string, required | Date when order is moved from ``on_hold`` status to `",
+                "operationId": "OrdersHolduntilPost",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/orders\/listbytag?orderStatus={orderStatus}&tagId={tagId}&page={page}&pageSize={pageSize}": {
+            "get": {
+                "summary": "List Orders by Tag",
+                "description": "Lists all orders that match the specified status and tag ID.\n\nUrl format with filters:\n\n```\n\/listbytag?orderStatus={orderStatus}\n&tagId={tagId}\n&page={page}\n&pageSize={pageSize}\n```",
+                "operationId": "OrdersListbytagOrderStatusOrderStatusTagIdTagIdPagePagePageSizePageSizeGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "orderStatus",
+                        "in": "path",
+                        "description": "The order's status."
+                    },
+                    {
+                        "name": "tagId",
+                        "in": "path",
+                        "description": "Returns customers that have been tagged with the specified tagId."
+                    },
+                    {
+                        "name": "page",
+                        "in": "path",
+                        "description": "Page number."
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "path",
+                        "description": "Requested page size. Max value is 500."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/orders\/markasshipped": {
+            "post": {
+                "summary": "Mark an Order as Shipped",
+                "description": "Marks an order as shipped without creating a label in ShipStation. The body of this request has the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n ``orderId`` | number, required | Identifies the order that will be marked as shipped.\n ``carrierCode`` | string, required | Code of the carrier that is marked as having shipped the order.\n ``shipDate`` | string, optional | Date order was shipped.\n ``trackingNumber",
+                "operationId": "OrdersMarkasshippedPost",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/orders\/removetag": {
+            "post": {
+                "summary": "Remove Tag from Order",
+                "description": "Removes a tag from the specified order.  The body of this request has the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``orderId`` | number, required | Identifies the order whose tag will be removed.\n``tagId`` | number, required | Identifies the tag to remove.",
+                "operationId": "OrdersRemovetagPost",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/orders\/restorefromhold": {
+            "post": {
+                "summary": "Restore Order from On Hold",
+                "description": "This method will change the status of the given order from On Hold to Awaiting Shipment. This endpoint is used when a holdUntil Date is attached to an order.\n\nThe body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``orderId`` | number, required | Identifies the order that will be restored to ``awaiting_shipment`` from ``on_hold``.",
+                "operationId": "OrdersRestorefromholdPost",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/orders\/unassignuser": {
+            "post": {
+                "summary": "Unassign User from Order",
+                "description": "Unassigns a user from an order.  The body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``orderIds`` | number, required | Identifies set of orders that will have the user unassigned.  Please note that if ANY of the orders within the array are not found, then no orders will have their users unassigned.",
+                "operationId": "OrdersUnassignuserPost",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/orders\/{orderId}": {
+            "delete": {
+                "summary": "Delete Order",
+                "description": "Removes order from ShipStation's UI. Note this is a \"soft\" delete action so the order will still exist in the database, but will be set to ``inactive``",
+                "operationId": "OrdersOrderIdDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "orderId",
+                        "in": "path",
+                        "description": "Returns fulfillments whose orders have the specified order ID."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get Order",
+                "description": "Retrieves a single order from the database.",
+                "operationId": "OrdersOrderIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "orderId",
+                        "in": "path",
+                        "description": "Returns fulfillments whose orders have the specified order ID."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/orders?customerName={customerName}&itemKeyword={itemKeyword}&createDateStart={createDateStart}&createDateEnd={createDateEnd}&modifyDateStart={modifyDateStart}&modifyDateEnd={modifyDateEnd}&orderDateStart={orderDateStart}&orderDateEnd={orderDateEnd}&orderNumber={orderNumber}&orderStatus={orderStatus}&paymentDateStart={paymentDateStart}&paymentDateEnd={paymentDateEnd}&storeId={storeId}&sortBy={sortBy}&sortDir={sortDir}&page={page}&pageSize={pageSize}": {
+            "get": {
+                "summary": "List Orders with parameters",
+                "description": "Obtains a list of orders that match the specified criteria.  All of the available filters are optional.  They do not need to be included in the URL.  If you do include them, here's what the URL may look like:\n\nUrl format with filters:\n\n```\n\/orders?customerName={customerName}\n&itemKeyword={itemKeyword}\n&createDateStart={createDateStart}\n&createDateEnd={createDateEnd}\n&modifyDateStart={modifyDateStart}\n&modifyDateEnd={modifyDateEnd}\n&orderDateStart={orderDateStart}\n&orderDateEnd={orderDateEnd}\n&or",
+                "operationId": "OrdersCustomerNameCustomerNameItemKeywordItemKeywordCreateDateStartCreateDateStartCreateDateE",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "customerName",
+                        "in": "path",
+                        "description": "Returns orders that match the specified name."
+                    },
+                    {
+                        "name": "itemKeyword",
+                        "in": "path",
+                        "description": "Returns orders that contain items that match the specified keyword. Fields searched are Sku, Description, and Options"
+                    },
+                    {
+                        "name": "createDateStart",
+                        "in": "path",
+                        "description": "Returns fulfillments created on or after the specified ``createDate``"
+                    },
+                    {
+                        "name": "createDateEnd",
+                        "in": "path",
+                        "description": "Returns fulfillments created on or before the specified ``createDate``"
+                    },
+                    {
+                        "name": "modifyDateStart",
+                        "in": "path",
+                        "description": "Returns orders that were modified after the specified date"
+                    },
+                    {
+                        "name": "modifyDateEnd",
+                        "in": "path",
+                        "description": "Returns orders that were modified before the specified date"
+                    },
+                    {
+                        "name": "orderDateStart",
+                        "in": "path",
+                        "description": "Returns orders greater than the specified date"
+                    },
+                    {
+                        "name": "orderDateEnd",
+                        "in": "path",
+                        "description": "Returns orders less than or equal to the specified date"
+                    },
+                    {
+                        "name": "orderNumber",
+                        "in": "path",
+                        "description": "Returns fulfillments whose orders have the specified order number."
+                    },
+                    {
+                        "name": "orderStatus",
+                        "in": "path",
+                        "description": "The order's status."
+                    },
+                    {
+                        "name": "paymentDateStart",
+                        "in": "path",
+                        "description": "Returns orders that were paid after the specified date"
+                    },
+                    {
+                        "name": "paymentDateEnd",
+                        "in": "path",
+                        "description": "Returns orders that were paid before the specified date"
+                    },
+                    {
+                        "name": "storeId",
+                        "in": "path",
+                        "description": "Filters orders to a single store. Call List Stores to obtain a list of store Ids."
+                    },
+                    {
+                        "name": "sortBy",
+                        "in": "path",
+                        "description": "Sorts the order of the response based off the specified value."
+                    },
+                    {
+                        "name": "sortDir",
+                        "in": "path",
+                        "description": "Sets the direction of the sort order."
+                    },
+                    {
+                        "name": "page",
+                        "in": "path",
+                        "description": "Page number."
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "path",
+                        "description": "Requested page size. Max value is 500."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/products": {
+            "get": {
+                "summary": "List Products w\/o parameters",
+                "description": "",
+                "operationId": "ProductsGet",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/products\/{productId}": {
+            "get": {
+                "summary": "Get Product",
+                "description": "",
+                "operationId": "ProductsProductIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "productId",
+                        "in": "path",
+                        "description": "The system generated identifier for the Product."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update Product",
+                "description": "Updates an existing product. This call does not currently support partial updates. The entire resource must be provided in the body of the request.",
+                "operationId": "ProductsProductIdPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "productId",
+                        "in": "path",
+                        "description": "The system generated identifier for the Product."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/products?sku={sku}&name={name}&productCategoryId={productCategoryId}&productTypeId={productTypeId}&tagId={tagId}&startDate={startDate}&endDate={endDate}&showInactive={showInactive}&sortBy={sortBy}&sortDir={sortDir}&page={page}&pageSize={pageSize}": {
+            "get": {
+                "summary": "List Products with parameters",
+                "description": "Obtains a list of products that match the specified criteria.  All of the available filters are optional.  They do not need to be included in the URL.  If you do include them, here's what the URL may look like:\n\nUrl format with filters:\n\n```\n\/products?sku={sku}\n&name={name}\n&productCategoryId={productCategoryId}\n&productTypeId={productTypeId}\n&tagId={tagId}\n&startDate={startDate}\n&endDate={endDate}\n&showInactive={showInactive}\n&sortBy={sortBy}\n&sortDir={sortDir}\n&page={page}\n&pageSize={pageSize}",
+                "operationId": "ProductsSkuSkuNameNameProductCategoryIdProductCategoryIdProductTypeIdProductTypeIdTagIdTag",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "sku",
+                        "in": "path",
+                        "description": "Returns products that match the specified SKU."
+                    },
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "Returns products that match the specified product name."
+                    },
+                    {
+                        "name": "productCategoryId",
+                        "in": "path",
+                        "description": "Returns products that match the specified productCategoryId."
+                    },
+                    {
+                        "name": "productTypeId",
+                        "in": "path",
+                        "description": "Returns products that match the specified productTypeId."
+                    },
+                    {
+                        "name": "tagId",
+                        "in": "path",
+                        "description": "Returns customers that have been tagged with the specified tagId."
+                    },
+                    {
+                        "name": "startDate",
+                        "in": "path",
+                        "description": "Returns products that were created after the specified date."
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "path",
+                        "description": "Returns products that were created before the specified date."
+                    },
+                    {
+                        "name": "sortBy",
+                        "in": "path",
+                        "description": "Sorts the order of the response based off the specified value."
+                    },
+                    {
+                        "name": "sortDir",
+                        "in": "path",
+                        "description": "Sets the direction of the sort order."
+                    },
+                    {
+                        "name": "page",
+                        "in": "path",
+                        "description": "Page number."
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "path",
+                        "description": "Requested page size. Max value is 500."
+                    },
+                    {
+                        "name": "showInactive",
+                        "in": "path",
+                        "description": "Specifies whether the list should include inactive products."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/shipments": {
+            "get": {
+                "summary": "List Shipments w\/o parameters",
+                "description": "",
+                "operationId": "ShipmentsGet",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/shipments\/createlabel": {
+            "post": {
+                "summary": "Create Shipment Label",
+                "description": "Creates a shipping label.  The ``labelData`` field returned in the response is a base64 encoded PDF value. Simply decode and save the output as a PDF file to retrieve a printable label.  The body of this request has the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n ``carrierCode`` | string, required | Identifies the carrier to be used for this label.\n ``serviceCode`` | string, required | Identifies the ship",
+                "operationId": "ShipmentsCreatelabelPost",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/shipments\/getrates": {
+            "post": {
+                "summary": "Get Rates",
+                "description": "Retrieves shipping rates for the specified shipping details.  The body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n ``carrierCode`` | string, required | Returns rates for the specified carrier.\n ``serviceCode`` | string, optional | Returns rates for the specified shipping service.\n ``packageCode`` | string, optional | Returns rates for the specified package type.\n ``fromP",
+                "operationId": "ShipmentsGetratesPost",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/shipments\/voidlabel": {
+            "post": {
+                "summary": "Void Label",
+                "description": "Voids the specified label by shipmentId.  The body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n ``shipmentId`` | number, required | ID of the shipment to void.",
+                "operationId": "ShipmentsVoidlabelPost",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/shipments?recipientName={recipientName}&recipientCountryCode={recipientCountryCode}&orderNumber={orderNumber}&orderId={orderId}&carrierCode={carrierCode}&serviceCode={serviceCode}&trackingNumber={trackingNumber}&createDateStart={createDateStart}&createDateEnd={createDateEnd}&shipDateStart={shipDateStart}&shipDateEnd={shipDateEnd}&voidDateStart={voidDateStart}&voidDateEnd={voidDateEnd}&includeShipmentItems={includeShipmentItems}&sortBy={sortBy}&sortDir={sortDir}&page={page}&pageSize={pageSize}": {
+            "get": {
+                "summary": "List Shipments with parameters",
+                "description": "Obtains a list of shipments that match the specified criteria.  Please note the following:\n\n- Only valid shipments with labels generated in ShipStation will be returned in the response. Orders that have been marked as shipped either through the UI or the API will not appear as they are considered external shipments.\n\n- To include every shipment's associated shipmentItems in the response, be sure to set the `includeShipmentItems` parameter to `true`.\n\nAll of the available filters are optional.  T",
+                "operationId": "ShipmentsRecipientNameRecipientNameRecipientCountryCodeRecipientCountryCodeOrderNumberOrderNum",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "recipientName",
+                        "in": "path",
+                        "description": "Returns fulfillments shipped to the specified recipient name."
+                    },
+                    {
+                        "name": "recipientCountryCode",
+                        "in": "path",
+                        "description": "Returns shipments shipped to the specified country code."
+                    },
+                    {
+                        "name": "orderNumber",
+                        "in": "path",
+                        "description": "Returns fulfillments whose orders have the specified order number."
+                    },
+                    {
+                        "name": "orderId",
+                        "in": "path",
+                        "description": "Returns fulfillments whose orders have the specified order ID."
+                    },
+                    {
+                        "name": "carrierCode",
+                        "in": "path",
+                        "description": "The code for the carrier account to retrieve."
+                    },
+                    {
+                        "name": "serviceCode",
+                        "in": "path",
+                        "description": "Returns shipments shipped with the specified shipping service."
+                    },
+                    {
+                        "name": "trackingNumber",
+                        "in": "path",
+                        "description": "Returns fulfillments with the specified tracking number."
+                    },
+                    {
+                        "name": "createDateStart",
+                        "in": "path",
+                        "description": "Returns fulfillments created on or after the specified ``createDate``"
+                    },
+                    {
+                        "name": "createDateEnd",
+                        "in": "path",
+                        "description": "Returns fulfillments created on or before the specified ``createDate``"
+                    },
+                    {
+                        "name": "shipDateStart",
+                        "in": "path",
+                        "description": "Returns fulfillments with the ``shipDate`` on or after the specified date"
+                    },
+                    {
+                        "name": "shipDateEnd",
+                        "in": "path",
+                        "description": "Returns fulfillments with the ``shipDate`` on or before the specified date"
+                    },
+                    {
+                        "name": "voidDateStart",
+                        "in": "path",
+                        "description": "Returns shipments voided on or after the specified date"
+                    },
+                    {
+                        "name": "voidDateEnd",
+                        "in": "path",
+                        "description": "Returns shipments voided on or before the specified date"
+                    },
+                    {
+                        "name": "includeShipmentItems",
+                        "in": "path",
+                        "description": "Specifies whether to include shipment items with results Default value: false."
+                    },
+                    {
+                        "name": "sortBy",
+                        "in": "path",
+                        "description": "Sorts the order of the response based off the specified value."
+                    },
+                    {
+                        "name": "sortDir",
+                        "in": "path",
+                        "description": "Sets the direction of the sort order."
+                    },
+                    {
+                        "name": "page",
+                        "in": "path",
+                        "description": "Page number."
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "path",
+                        "description": "Requested page size. Max value is 500."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/stores\/deactivate": {
+            "post": {
+                "summary": "Deactivate Store",
+                "description": "Deactivates the specified store.\n\nThe body of this request has the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``storeId``  | number, required | ID of the store to deactivate.",
+                "operationId": "StoresDeactivatePost",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/stores\/getrefreshstatus?storeId={storeId}": {
+            "get": {
+                "summary": "Get Store Refresh Status",
+                "description": "Retrieves the refresh status of a given store.",
+                "operationId": "StoresGetrefreshstatusStoreIdStoreIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "storeId",
+                        "in": "path",
+                        "description": "Filters orders to a single store. Call List Stores to obtain a list of store Ids."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/stores\/marketplaces": {
+            "get": {
+                "summary": "List Marketplaces",
+                "description": "Lists the marketplaces that can be integrated with ShipStation.",
+                "operationId": "StoresMarketplacesGet",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/stores\/reactivate": {
+            "post": {
+                "summary": "Reactivate Store",
+                "description": "Reactivates the specified store. Note: stores are active by default\n\nThe body of this request has the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``storeId``  | number, required | ID of the store to reactivate.",
+                "operationId": "StoresReactivatePost",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/stores\/refreshstore?storeId={storeId}&refreshDate={refreshDate}": {
+            "post": {
+                "summary": "Refresh Store",
+                "description": "Initiates a store refresh.",
+                "operationId": "StoresRefreshstoreStoreIdStoreIdRefreshDateRefreshDatePost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "storeId",
+                        "in": "path",
+                        "description": "Filters orders to a single store. Call List Stores to obtain a list of store Ids."
+                    },
+                    {
+                        "name": "refreshDate",
+                        "in": "path",
+                        "description": "Specifies the starting date for new order imports.  If the refreshDate is not specified, ShipStation will use the last recorded refreshDate for that store."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "\/stores\/{storeId}": {
+            "get": {
+                "summary": "Get Store",
+                "description": "",
+                "operationId": "StoresStoreIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "storeId",
+                        "in": "path",
+                        "description": "Filters orders to a single store. Call List Stores to obtain a list of store Ids."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update Store",
+                "description": "Updates an existing store. This call does not currently support partial updates. The entire resource must be provided in the body of the request.",
+                "operationId": "StoresStoreIdPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "storeId",
+                        "in": "path",
+                        "description": "Filters orders to a single store. Call List Stores to obtain a list of store Ids."
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Add_Funds": {
+                "type": "object"
+            },
+            "Add_FundsModel": {
+                "type": "object"
+            },
+            "Add_Tag_to_Order": {
+                "type": "object"
+            },
+            "Assign_User_to_Order": {
+                "type": "object"
+            },
+            "Create\/Update_Multiple_Orders": {
+                "type": "object"
+            },
+            "Create\/Update_Order": {
+                "type": "object"
+            },
+            "Create_Label_for_Order": {
+                "type": "object"
+            },
+            "Create_Shipment_Label": {
+                "type": "object"
+            },
+            "Create_Warehouse": {
+                "type": "object"
+            },
+            "Customer": {
+                "type": "object"
+            },
+            "CustomerModel": {
+                "type": "object"
+            },
+            "Deactivate_Store": {
+                "type": "object"
+            },
+            "Get\/Delete_Order": {
+                "type": "object"
+            },
+            "Get\/Delete_OrderModel": {
+                "type": "object"
+            },
+            "Get\/Update_Store": {
+                "type": "object"
+            },
+            "Get\/Update_StoreModel": {
+                "type": "object"
+            },
+            "Get\/Update_Warehouse": {
+                "type": "object"
+            },
+            "Get\/Update_WarehouseModel": {
+                "type": "object"
+            },
+            "Get\/Update_a_Product": {
+                "type": "object"
+            },
+            "Get\/Update_a_ProductModel": {
+                "type": "object"
+            },
+            "Get_Carrier": {
+                "type": "object"
+            },
+            "Get_CarrierModel": {
+                "type": "object"
+            },
+            "Get_Delete_Order": {
+                "type": "object"
+            },
+            "Get_Delete_OrderModel": {
+                "type": "object"
+            },
+            "Get_Rates": {
+                "type": "object"
+            },
+            "Get_Store_Refresh_Status": {
+                "type": "object"
+            },
+            "Get_Update_Store": {
+                "type": "object"
+            },
+            "Get_Update_StoreModel": {
+                "type": "object"
+            },
+            "Get_Update_Warehouse": {
+                "type": "object"
+            },
+            "Get_Update_WarehouseModel": {
+                "type": "object"
+            },
+            "Get_Update_a_Product": {
+                "type": "object"
+            },
+            "Get_Update_a_ProductModel": {
+                "type": "object"
+            },
+            "Hold_Order_Until": {
+                "type": "object"
+            },
+            "List_Carriers": {
+                "type": "object"
+            },
+            "List_CarriersModel": {
+                "type": "object"
+            },
+            "List_Customers": {
+                "type": "object"
+            },
+            "List_CustomersModel": {
+                "type": "object"
+            },
+            "List_Fulfillments": {
+                "type": "object"
+            },
+            "List_FulfillmentsModel": {
+                "type": "object"
+            },
+            "List_Marketplaces": {
+                "type": "object"
+            },
+            "List_Orders": {
+                "type": "object"
+            },
+            "List_OrdersModel": {
+                "type": "object"
+            },
+            "List_Orders_by_Tag": {
+                "type": "object"
+            },
+            "List_Packages": {
+                "type": "object"
+            },
+            "List_PackagesModel": {
+                "type": "object"
+            },
+            "List_Products": {
+                "type": "object"
+            },
+            "List_ProductsModel": {
+                "type": "object"
+            },
+            "List_Services": {
+                "type": "object"
+            },
+            "List_ServicesModel": {
+                "type": "object"
+            },
+            "List_Shipments": {
+                "type": "object"
+            },
+            "List_ShipmentsModel": {
+                "type": "object"
+            },
+            "List_Stores": {
+                "type": "object"
+            },
+            "List_Tags": {
+                "type": "object"
+            },
+            "List_TagsModel": {
+                "type": "object"
+            },
+            "List_Users": {
+                "type": "object"
+            },
+            "List_UsersModel": {
+                "type": "object"
+            },
+            "List_Warehouses": {
+                "type": "object"
+            },
+            "List_Webhooks": {
+                "type": "object"
+            },
+            "Mark_an_Order_as_Shipped": {
+                "type": "object"
+            },
+            "Reactivate_Store": {
+                "type": "object"
+            },
+            "Refresh_Store": {
+                "type": "object"
+            },
+            "Register_Account": {
+                "type": "object"
+            },
+            "Register_AccountModel": {
+                "type": "object"
+            },
+            "Remove_Tag_from_Order": {
+                "type": "object"
+            },
+            "Restore_Order_from_On_Hold": {
+                "type": "object"
+            },
+            "Subscribe_to_Webhook": {
+                "type": "object"
+            },
+            "Subscribe_to_WebhookModel": {
+                "type": "object"
+            },
+            "Unassign_User_from_Order": {
+                "type": "object"
+            },
+            "Unsubscribe_to_Webhook": {
+                "type": "object"
+            },
+            "Void_Label": {
+                "type": "object"
+            }
+        }
+    }
+}
