@@ -1,0 +1,1592 @@
+{
+    "id": "3954baf8483cf1d18ace7cf092be39fe",
+    "name": "ShipStation Developer Portal",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "f589e708173c8e15b754039d1cfafe43",
+            "name": "List Tags",
+            "url": "http:\/\/ssapi.shipstation.com\/\/accounts\/listtags",
+            "description": "Lists all tags defined for this account.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "f1470628804356fdcaa77a4526ee9f23",
+            "name": "Register Account",
+            "url": "http:\/\/ssapi.shipstation.com\/\/accounts\/registeraccount",
+            "description": "Creates a new ShipStation account and generates an apiKey and apiSecret to be used by the newly created account. PLEASE NOTE: This endpoint does not require API key and API Secret credentials.  The Authorization header can be left off. Use of this specific endpoint requires approval, and is meant only for direct partners of ShipStation. This is the only endpoint to require approval. All other endpoints listed in this document can be accessed by submitting proper authorization credentials in the ",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "ce97c8a8c9430816ada3418f1fa79370",
+            "name": "List Carriers",
+            "url": "http:\/\/ssapi.shipstation.com\/\/carriers",
+            "description": "Lists all shipping providers connected to this account.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "1102751b80ab2e1bcbe924e2c579c95d",
+            "name": "Add Funds",
+            "url": "http:\/\/ssapi.shipstation.com\/\/carriers\/addfunds",
+            "description": "Adds funds to a carrier account using the payment information on file. The body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n ``carrierCode`` | string, required |  The carrier to add funds to.\n ``amount`` | number, required | The dollar amount to add to the account.  The minimum value that can be added is $10.00.  The maximum value is $10,000.00.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "7aeade86dc9dcadf044ce0976f815e10",
+            "name": "Get Carrier",
+            "url": "http:\/\/ssapi.shipstation.com\/\/carriers\/getcarrier?carrierCode={carrierCode}",
+            "description": "Retrieves the shipping carrier account details for the specified carrierCode. Use this method to determine a carrier's account balance.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "carrierCode",
+                    "description": "The code for the carrier account to retrieve.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "410007242080bb0f51cfab0be4c14a6b",
+            "name": "List Packages",
+            "url": "http:\/\/ssapi.shipstation.com\/\/carriers\/listpackages?carrierCode={carrierCode}",
+            "description": "Retrieves a list of packages for the specified carrier",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "carrierCode",
+                    "description": "The code for the carrier account to retrieve.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "b87ec28b65de0fe0da286b9633dea1b5",
+            "name": "List Services",
+            "url": "http:\/\/ssapi.shipstation.com\/\/carriers\/listservices?carrierCode={carrierCode}",
+            "description": "Retrieves the list of available shipping services provided by the specified carrier",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "carrierCode",
+                    "description": "The code for the carrier account to retrieve.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "dd323c80cb7d67e5d48a0911d3deba61",
+            "name": "Get Customer",
+            "url": "http:\/\/ssapi.shipstation.com\/\/customers\/{customerId}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "customerId",
+                    "description": "The system generated identifier for the Customer.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "81e60916404083fefc19b1c28112cfc5",
+            "name": "List Customers",
+            "url": "http:\/\/ssapi.shipstation.com\/\/customers?stateCode={stateCode}&countryCode={countryCode}&tagId={tagId}&marketplaceId={marketplaceId}&sortBy={sortBy}&sortDir={sortDir}&page={page}&pageSize={pageSize}",
+            "description": "Obtains a list of customers that match the specified criteria.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "stateCode",
+                    "description": "Returns customers that reside in the specified stateCode.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "countryCode",
+                    "description": "Returns customers that reside in the specified countryCode.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "marketplaceId",
+                    "description": "Returns customers that purchased items from the specified marketplaceId.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tagId",
+                    "description": "Returns customers that have been tagged with the specified tagId.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sortBy",
+                    "description": "Sorts the order of the response based off the specified value.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sortDir",
+                    "description": "Sets the direction of the sort order.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "Page number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pageSize",
+                    "description": "Requested page size. Max value is 500.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "b7c2b28b01b4629c40bc9d905e00c736",
+            "name": "List Fulfillments w\/o parameters",
+            "url": "http:\/\/ssapi.shipstation.com\/\/fulfillments",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "29963b7d47cc31bd98a3de714ba91f65",
+            "name": "List Fulfillments with parameters",
+            "url": "http:\/\/ssapi.shipstation.com\/\/fulfillments?fulfillmentId={fulfillmentId}&orderId={orderId}&orderNumber={orderNumber}&trackingNumber={trackingNumber}&recipientName={recipientName}&createDateStart={createDateStart}&createDateEnd={createDateEnd}&shipDateStart={shipDateStart}&shipDateEnd={shipDateEnd}&sortBy={sortBy}&sortDir={sortDir}&page={page}&pageSize={pageSize}",
+            "description": "Obtains a list of fulfillments that match the specified criteria.  Please note the following:\n\n- Orders that have been marked as shipped either through the UI or the API will appear in the response as they are considered fulfillments.\n\nAll of the available filters are optional.  They do not need to be included in the URL.  If you do include them, here's what the URL may look like:\n\nUrl format with filters:\n\n```\nfulfillments?fulfillmentId={fulfillmentId}\n&orderId={orderId}\n&orderNumber={orderNumb",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fulfillmentId",
+                    "description": "Returns the fulfillment with the specified fulfillment ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "orderId",
+                    "description": "Returns fulfillments whose orders have the specified order ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "orderNumber",
+                    "description": "Returns fulfillments whose orders have the specified order number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "trackingNumber",
+                    "description": "Returns fulfillments with the specified tracking number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "recipientName",
+                    "description": "Returns fulfillments shipped to the specified recipient name.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "createDateStart",
+                    "description": "Returns fulfillments created on or after the specified ``createDate``",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "createDateEnd",
+                    "description": "Returns fulfillments created on or before the specified ``createDate``",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "shipDateStart",
+                    "description": "Returns fulfillments with the ``shipDate`` on or after the specified date",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "shipDateEnd",
+                    "description": "Returns fulfillments with the ``shipDate`` on or before the specified date",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sortBy",
+                    "description": "Sorts the order of the response based off the specified value.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sortDir",
+                    "description": "Sets the direction of the sort order.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "Page number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pageSize",
+                    "description": "Requested page size. Max value is 500.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "45d5d58e70a85c001963c2cac46d31db",
+            "name": "List Orders w\/o parameters",
+            "url": "http:\/\/ssapi.shipstation.com\/\/orders",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "97767b95475c7e1a04f77e94e7e98abe",
+            "name": "Add Tag to Order",
+            "url": "http:\/\/ssapi.shipstation.com\/\/orders\/addtag",
+            "description": "Adds a tag to an order.  The body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``orderId`` | number, required | Identifies the order that will be tagged.\n``tagId`` | number, required | Identifies the tag that will be applied to the order.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "155e8deebd3f2ea9407690afbad1ee5a",
+            "name": "Assign User to Order",
+            "url": "http:\/\/ssapi.shipstation.com\/\/orders\/assignuser",
+            "description": "Assigns a user to an order.  The body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``orderIds`` | number, required | Identifies set of orders that will be assigned the user.  Please note that if ANY of the orders within the array are not found, no orders will have a user assigned to them.\n``userId`` | number, required | Identifies the user that will be applied to the order",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "0becdb8ef153716f98f45d24afd4ee4a",
+            "name": "Create Label for Order",
+            "url": "http:\/\/ssapi.shipstation.com\/\/orders\/createlabelfororder",
+            "description": "Creates a shipping label for a given order.  The ``labelData`` field returned in the response is a base64 encoded PDF value. Simply decode and save the output as a PDF file to retrieve a printable label.  The body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``orderId`` | number, required | Identifies the order that will be shipped.\n``carrierCode`` | string, required | The",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "5acddffa65c5d6461ef637fb8403c015",
+            "name": "Create\/Update Order",
+            "url": "http:\/\/ssapi.shipstation.com\/\/orders\/createorder",
+            "description": "If the ``orderKey`` is specified, the method becomes idempotent and the existing order with that key will be updated. Note: Only orders in an open status in ShipStation (``awaiting_payment``,``awaiting_shipment``, and ``on_hold``) can be updated through this method. ``cancelled`` and ``shipped`` are locked from modification through the API.  The body of this request should specify an [**Order**](https:\/\/www.shipstation.com\/developer-api\/#\/reference\/model-order) object:\n\nName               |Data ",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "4ddb5a8122b413635b06a59801c0c355",
+            "name": "Create\/Update Multiple Orders",
+            "url": "http:\/\/ssapi.shipstation.com\/\/orders\/createorders",
+            "description": "This endpoint can be used to create or update multiple orders in one request. If the ``orderKey`` is specified in an order, the existing order with that key will be updated. Note: Only orders in an open status in ShipStation (``awaiting_payment``,``awaiting_shipment``, and ``on_hold``) can be updated through this method. ``cancelled`` and ``shipped`` are locked from modification through the API.\n\nData Type          |Description\n-------------------|-------------------\nOrder, required | An array o",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "f8d90e256584033a23e1a88d9024986d",
+            "name": "Hold Order Until",
+            "url": "http:\/\/ssapi.shipstation.com\/\/orders\/holduntil",
+            "description": "This method will change the status of the given order to On Hold until the date specified, when the status will automatically change to Awaiting Shipment.\n\nThe body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``orderId`` | number, required | Identifies the order that will be held.\n``holdUntilDate`` | string, required | Date when order is moved from ``on_hold`` status to `",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "9a10ddc9c0745a4cb2d926a68932faea",
+            "name": "List Orders by Tag",
+            "url": "http:\/\/ssapi.shipstation.com\/\/orders\/listbytag?orderStatus={orderStatus}&tagId={tagId}&page={page}&pageSize={pageSize}",
+            "description": "Lists all orders that match the specified status and tag ID.\n\nUrl format with filters:\n\n```\n\/listbytag?orderStatus={orderStatus}\n&tagId={tagId}\n&page={page}\n&pageSize={pageSize}\n```",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "orderStatus",
+                    "description": "The order's status.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tagId",
+                    "description": "Returns customers that have been tagged with the specified tagId.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "Page number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pageSize",
+                    "description": "Requested page size. Max value is 500.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "fb1cc558c2993baf664539ce4b5ce233",
+            "name": "Mark an Order as Shipped",
+            "url": "http:\/\/ssapi.shipstation.com\/\/orders\/markasshipped",
+            "description": "Marks an order as shipped without creating a label in ShipStation. The body of this request has the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n ``orderId`` | number, required | Identifies the order that will be marked as shipped.\n ``carrierCode`` | string, required | Code of the carrier that is marked as having shipped the order.\n ``shipDate`` | string, optional | Date order was shipped.\n ``trackingNumber",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "3884915c6c1871c9db30c7f41fe158fa",
+            "name": "Remove Tag from Order",
+            "url": "http:\/\/ssapi.shipstation.com\/\/orders\/removetag",
+            "description": "Removes a tag from the specified order.  The body of this request has the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``orderId`` | number, required | Identifies the order whose tag will be removed.\n``tagId`` | number, required | Identifies the tag to remove.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "c4319e17ee186e7fa5c9f18a55fa5668",
+            "name": "Restore Order from On Hold",
+            "url": "http:\/\/ssapi.shipstation.com\/\/orders\/restorefromhold",
+            "description": "This method will change the status of the given order from On Hold to Awaiting Shipment. This endpoint is used when a holdUntil Date is attached to an order.\n\nThe body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``orderId`` | number, required | Identifies the order that will be restored to ``awaiting_shipment`` from ``on_hold``.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "f47831275bfabd2a89be0090a4cdea27",
+            "name": "Unassign User from Order",
+            "url": "http:\/\/ssapi.shipstation.com\/\/orders\/unassignuser",
+            "description": "Unassigns a user from an order.  The body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``orderIds`` | number, required | Identifies set of orders that will have the user unassigned.  Please note that if ANY of the orders within the array are not found, then no orders will have their users unassigned.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "49d385eaccd382dea7b2b5b8b006ce8f",
+            "name": "Delete Order",
+            "url": "http:\/\/ssapi.shipstation.com\/\/orders\/{orderId}",
+            "description": "Removes order from ShipStation's UI. Note this is a \"soft\" delete action so the order will still exist in the database, but will be set to ``inactive``",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "orderId",
+                    "description": "Returns fulfillments whose orders have the specified order ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "a04b16946d6c6fc46e86090b620abc10",
+            "name": "Get Order",
+            "url": "http:\/\/ssapi.shipstation.com\/\/orders\/{orderId}",
+            "description": "Retrieves a single order from the database.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "orderId",
+                    "description": "Returns fulfillments whose orders have the specified order ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "efe27ef588a11442b6aaf17986eb0934",
+            "name": "List Orders with parameters",
+            "url": "http:\/\/ssapi.shipstation.com\/\/orders?customerName={customerName}&itemKeyword={itemKeyword}&createDateStart={createDateStart}&createDateEnd={createDateEnd}&modifyDateStart={modifyDateStart}&modifyDateEnd={modifyDateEnd}&orderDateStart={orderDateStart}&orderDateEnd={orderDateEnd}&orderNumber={orderNumber}&orderStatus={orderStatus}&paymentDateStart={paymentDateStart}&paymentDateEnd={paymentDateEnd}&storeId={storeId}&sortBy={sortBy}&sortDir={sortDir}&page={page}&pageSize={pageSize}",
+            "description": "Obtains a list of orders that match the specified criteria.  All of the available filters are optional.  They do not need to be included in the URL.  If you do include them, here's what the URL may look like:\n\nUrl format with filters:\n\n```\n\/orders?customerName={customerName}\n&itemKeyword={itemKeyword}\n&createDateStart={createDateStart}\n&createDateEnd={createDateEnd}\n&modifyDateStart={modifyDateStart}\n&modifyDateEnd={modifyDateEnd}\n&orderDateStart={orderDateStart}\n&orderDateEnd={orderDateEnd}\n&or",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "customerName",
+                    "description": "Returns orders that match the specified name.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "itemKeyword",
+                    "description": "Returns orders that contain items that match the specified keyword. Fields searched are Sku, Description, and Options",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "createDateStart",
+                    "description": "Returns fulfillments created on or after the specified ``createDate``",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "createDateEnd",
+                    "description": "Returns fulfillments created on or before the specified ``createDate``",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "modifyDateStart",
+                    "description": "Returns orders that were modified after the specified date",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "modifyDateEnd",
+                    "description": "Returns orders that were modified before the specified date",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "orderDateStart",
+                    "description": "Returns orders greater than the specified date",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "orderDateEnd",
+                    "description": "Returns orders less than or equal to the specified date",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "orderNumber",
+                    "description": "Returns fulfillments whose orders have the specified order number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "orderStatus",
+                    "description": "The order's status.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "paymentDateStart",
+                    "description": "Returns orders that were paid after the specified date",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "paymentDateEnd",
+                    "description": "Returns orders that were paid before the specified date",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "storeId",
+                    "description": "Filters orders to a single store. Call List Stores to obtain a list of store Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sortBy",
+                    "description": "Sorts the order of the response based off the specified value.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sortDir",
+                    "description": "Sets the direction of the sort order.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "Page number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pageSize",
+                    "description": "Requested page size. Max value is 500.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "a93f37a33fc85ec96d7d0518684c0140",
+            "name": "List Products w\/o parameters",
+            "url": "http:\/\/ssapi.shipstation.com\/\/products",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "70266e452d4be4a1c934d7af387fe005",
+            "name": "Get Product",
+            "url": "http:\/\/ssapi.shipstation.com\/\/products\/{productId}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "productId",
+                    "description": "The system generated identifier for the Product.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "d38fb019e7ec02a932bf5b504b90627e",
+            "name": "Update Product",
+            "url": "http:\/\/ssapi.shipstation.com\/\/products\/{productId}",
+            "description": "Updates an existing product. This call does not currently support partial updates. The entire resource must be provided in the body of the request.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "productId",
+                    "description": "The system generated identifier for the Product.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "8b656b7fa050491415a12370b3938b28",
+            "name": "List Products with parameters",
+            "url": "http:\/\/ssapi.shipstation.com\/\/products?sku={sku}&name={name}&productCategoryId={productCategoryId}&productTypeId={productTypeId}&tagId={tagId}&startDate={startDate}&endDate={endDate}&showInactive={showInactive}&sortBy={sortBy}&sortDir={sortDir}&page={page}&pageSize={pageSize}",
+            "description": "Obtains a list of products that match the specified criteria.  All of the available filters are optional.  They do not need to be included in the URL.  If you do include them, here's what the URL may look like:\n\nUrl format with filters:\n\n```\n\/products?sku={sku}\n&name={name}\n&productCategoryId={productCategoryId}\n&productTypeId={productTypeId}\n&tagId={tagId}\n&startDate={startDate}\n&endDate={endDate}\n&showInactive={showInactive}\n&sortBy={sortBy}\n&sortDir={sortDir}\n&page={page}\n&pageSize={pageSize}",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "sku",
+                    "description": "Returns products that match the specified SKU.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "name",
+                    "description": "Returns products that match the specified product name.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "productCategoryId",
+                    "description": "Returns products that match the specified productCategoryId.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "productTypeId",
+                    "description": "Returns products that match the specified productTypeId.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tagId",
+                    "description": "Returns customers that have been tagged with the specified tagId.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "startDate",
+                    "description": "Returns products that were created after the specified date.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "endDate",
+                    "description": "Returns products that were created before the specified date.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sortBy",
+                    "description": "Sorts the order of the response based off the specified value.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sortDir",
+                    "description": "Sets the direction of the sort order.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "Page number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pageSize",
+                    "description": "Requested page size. Max value is 500.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "showInactive",
+                    "description": "Specifies whether the list should include inactive products.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "5cba62c0109f6f40476a3039f7b57758",
+            "name": "List Shipments w\/o parameters",
+            "url": "http:\/\/ssapi.shipstation.com\/\/shipments",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "17193b1a5f7661a7a47054b1642b74f0",
+            "name": "Create Shipment Label",
+            "url": "http:\/\/ssapi.shipstation.com\/\/shipments\/createlabel",
+            "description": "Creates a shipping label.  The ``labelData`` field returned in the response is a base64 encoded PDF value. Simply decode and save the output as a PDF file to retrieve a printable label.  The body of this request has the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n ``carrierCode`` | string, required | Identifies the carrier to be used for this label.\n ``serviceCode`` | string, required | Identifies the ship",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "afe5e27e7fec857b935f8248418e2aa0",
+            "name": "Get Rates",
+            "url": "http:\/\/ssapi.shipstation.com\/\/shipments\/getrates",
+            "description": "Retrieves shipping rates for the specified shipping details.  The body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n ``carrierCode`` | string, required | Returns rates for the specified carrier.\n ``serviceCode`` | string, optional | Returns rates for the specified shipping service.\n ``packageCode`` | string, optional | Returns rates for the specified package type.\n ``fromP",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "653098a1f1ebb952707ab129f1ceb3db",
+            "name": "Void Label",
+            "url": "http:\/\/ssapi.shipstation.com\/\/shipments\/voidlabel",
+            "description": "Voids the specified label by shipmentId.  The body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n ``shipmentId`` | number, required | ID of the shipment to void.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "357a13522e4b841cc51e8afd926370da",
+            "name": "List Shipments with parameters",
+            "url": "http:\/\/ssapi.shipstation.com\/\/shipments?recipientName={recipientName}&recipientCountryCode={recipientCountryCode}&orderNumber={orderNumber}&orderId={orderId}&carrierCode={carrierCode}&serviceCode={serviceCode}&trackingNumber={trackingNumber}&createDateStart={createDateStart}&createDateEnd={createDateEnd}&shipDateStart={shipDateStart}&shipDateEnd={shipDateEnd}&voidDateStart={voidDateStart}&voidDateEnd={voidDateEnd}&includeShipmentItems={includeShipmentItems}&sortBy={sortBy}&sortDir={sortDir}&page={page}&pageSize={pageSize}",
+            "description": "Obtains a list of shipments that match the specified criteria.  Please note the following:\n\n- Only valid shipments with labels generated in ShipStation will be returned in the response. Orders that have been marked as shipped either through the UI or the API will not appear as they are considered external shipments.\n\n- To include every shipment's associated shipmentItems in the response, be sure to set the `includeShipmentItems` parameter to `true`.\n\nAll of the available filters are optional.  T",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "recipientName",
+                    "description": "Returns fulfillments shipped to the specified recipient name.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "recipientCountryCode",
+                    "description": "Returns shipments shipped to the specified country code.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "orderNumber",
+                    "description": "Returns fulfillments whose orders have the specified order number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "orderId",
+                    "description": "Returns fulfillments whose orders have the specified order ID.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "carrierCode",
+                    "description": "The code for the carrier account to retrieve.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "serviceCode",
+                    "description": "Returns shipments shipped with the specified shipping service.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "trackingNumber",
+                    "description": "Returns fulfillments with the specified tracking number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "createDateStart",
+                    "description": "Returns fulfillments created on or after the specified ``createDate``",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "createDateEnd",
+                    "description": "Returns fulfillments created on or before the specified ``createDate``",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "shipDateStart",
+                    "description": "Returns fulfillments with the ``shipDate`` on or after the specified date",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "shipDateEnd",
+                    "description": "Returns fulfillments with the ``shipDate`` on or before the specified date",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "voidDateStart",
+                    "description": "Returns shipments voided on or after the specified date",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "voidDateEnd",
+                    "description": "Returns shipments voided on or before the specified date",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "includeShipmentItems",
+                    "description": "Specifies whether to include shipment items with results Default value: false.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sortBy",
+                    "description": "Sorts the order of the response based off the specified value.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sortDir",
+                    "description": "Sets the direction of the sort order.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "Page number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pageSize",
+                    "description": "Requested page size. Max value is 500.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "6a6a9db9181947a5836d9dafe000f3de",
+            "name": "Deactivate Store",
+            "url": "http:\/\/ssapi.shipstation.com\/\/stores\/deactivate",
+            "description": "Deactivates the specified store.\n\nThe body of this request has the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``storeId``  | number, required | ID of the store to deactivate.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "91b1535f3a6ad54fba341da148a950e1",
+            "name": "Get Store Refresh Status",
+            "url": "http:\/\/ssapi.shipstation.com\/\/stores\/getrefreshstatus?storeId={storeId}",
+            "description": "Retrieves the refresh status of a given store.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "storeId",
+                    "description": "Filters orders to a single store. Call List Stores to obtain a list of store Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "12db7ba2355a2c5b773db9d602b16207",
+            "name": "List Marketplaces",
+            "url": "http:\/\/ssapi.shipstation.com\/\/stores\/marketplaces",
+            "description": "Lists the marketplaces that can be integrated with ShipStation.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "cdfc50db3e599a4b3be6da742445147f",
+            "name": "Reactivate Store",
+            "url": "http:\/\/ssapi.shipstation.com\/\/stores\/reactivate",
+            "description": "Reactivates the specified store. Note: stores are active by default\n\nThe body of this request has the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``storeId``  | number, required | ID of the store to reactivate.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "d0488cc2798eba66cc5d8a16c8b98229",
+            "name": "Refresh Store",
+            "url": "http:\/\/ssapi.shipstation.com\/\/stores\/refreshstore?storeId={storeId}&refreshDate={refreshDate}",
+            "description": "Initiates a store refresh.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "storeId",
+                    "description": "Filters orders to a single store. Call List Stores to obtain a list of store Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "refreshDate",
+                    "description": "Specifies the starting date for new order imports.  If the refreshDate is not specified, ShipStation will use the last recorded refreshDate for that store.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "fd9fb7449044500527a7bfce614a9573",
+            "name": "Get Store",
+            "url": "http:\/\/ssapi.shipstation.com\/\/stores\/{storeId}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "storeId",
+                    "description": "Filters orders to a single store. Call List Stores to obtain a list of store Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        },
+        {
+            "id": "fb18e3ae8e84042d0ab9c68ca11a75fc",
+            "name": "Update Store",
+            "url": "http:\/\/ssapi.shipstation.com\/\/stores\/{storeId}",
+            "description": "Updates an existing store. This call does not currently support partial updates. The entire resource must be provided in the body of the request.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "storeId",
+                    "description": "Filters orders to a single store. Call List Stores to obtain a list of store Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "rawModeData": ""
+        }
+    ]
+}
