@@ -8,8 +8,8 @@
         "relative data",
         "service api"
     ],
-    "created": "2019-12-19",
-    "modified": "2019-12-19",
+    "created": "2019-12-21",
+    "modified": "2019-12-21",
     "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/ship-station\/master\/apis.json",
     "specificationVersion": "0.14",
     "apis": [
@@ -27,11 +27,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/ship-station-developer-portal-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/ship-station-developer-portal-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/ship-station\/master\/ship-station-developer-portal-openapi.json"
                 }
             ]
         },
@@ -49,17 +45,17 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/shipstation-developer-portal-openapi.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/shipstation-developer-portal-postman-collection.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/ship-station\/master\/shipstation-developer-portal-openapi.json"
                 }
             ]
         }
     ],
     "include": [],
     "x-common": [
+        {
+            "type": "APIs.json",
+            "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/apis.json"
+        },
         {
             "type": "Website",
             "url": "http:\/\/bit.ly\/_ShipStation"
