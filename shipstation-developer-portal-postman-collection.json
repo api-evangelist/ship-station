@@ -1,5 +1,5 @@
 {
-    "id": "3954baf8483cf1d18ace7cf092be39fe",
+    "id": "5690bbd8cae5b0b3013909b03bc2a4a6",
     "name": "ShipStation Developer Portal",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "f589e708173c8e15b754039d1cfafe43",
+            "id": "1d720c3d6115cc0991fdcdeeac0ecfcf",
             "name": "List Tags",
             "url": "http:\/\/ssapi.shipstation.com\/\/accounts\/listtags",
             "description": "Lists all tags defined for this account.",
@@ -29,11 +29,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "f1470628804356fdcaa77a4526ee9f23",
+            "id": "5aae3c7cd82ea5e6da01f30c6b31d280",
             "name": "Register Account",
             "url": "http:\/\/ssapi.shipstation.com\/\/accounts\/registeraccount",
             "description": "Creates a new ShipStation account and generates an apiKey and apiSecret to be used by the newly created account. PLEASE NOTE: This endpoint does not require API key and API Secret credentials.  The Authorization header can be left off. Use of this specific endpoint requires approval, and is meant only for direct partners of ShipStation. This is the only endpoint to require approval. All other endpoints listed in this document can be accessed by submitting proper authorization credentials in the ",
@@ -52,11 +52,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "ce97c8a8c9430816ada3418f1fa79370",
+            "id": "c0a818603003e3f9d4bb0b06bc05a47c",
             "name": "List Carriers",
             "url": "http:\/\/ssapi.shipstation.com\/\/carriers",
             "description": "Lists all shipping providers connected to this account.",
@@ -75,11 +75,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "1102751b80ab2e1bcbe924e2c579c95d",
+            "id": "683d5c33d242116530d633de7efbadbe",
             "name": "Add Funds",
             "url": "http:\/\/ssapi.shipstation.com\/\/carriers\/addfunds",
             "description": "Adds funds to a carrier account using the payment information on file. The body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n ``carrierCode`` | string, required |  The carrier to add funds to.\n ``amount`` | number, required | The dollar amount to add to the account.  The minimum value that can be added is $10.00.  The maximum value is $10,000.00.",
@@ -98,11 +98,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "7aeade86dc9dcadf044ce0976f815e10",
+            "id": "8990fd9370ae9df0ff8b53f9e046b470",
             "name": "Get Carrier",
             "url": "http:\/\/ssapi.shipstation.com\/\/carriers\/getcarrier?carrierCode={carrierCode}",
             "description": "Retrieves the shipping carrier account details for the specified carrierCode. Use this method to determine a carrier's account balance.",
@@ -129,11 +129,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "410007242080bb0f51cfab0be4c14a6b",
+            "id": "e52329ace48c6e5fd400f596e7c77edf",
             "name": "List Packages",
             "url": "http:\/\/ssapi.shipstation.com\/\/carriers\/listpackages?carrierCode={carrierCode}",
             "description": "Retrieves a list of packages for the specified carrier",
@@ -160,11 +160,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "b87ec28b65de0fe0da286b9633dea1b5",
+            "id": "3f0b1ec1aa7d202cddfe115f8fb5e987",
             "name": "List Services",
             "url": "http:\/\/ssapi.shipstation.com\/\/carriers\/listservices?carrierCode={carrierCode}",
             "description": "Retrieves the list of available shipping services provided by the specified carrier",
@@ -191,11 +191,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "dd323c80cb7d67e5d48a0911d3deba61",
+            "id": "d891cc752ceae8ffb6501d81f5a6f936",
             "name": "Get Customer",
             "url": "http:\/\/ssapi.shipstation.com\/\/customers\/{customerId}",
             "description": "",
@@ -222,11 +222,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "81e60916404083fefc19b1c28112cfc5",
+            "id": "62303d2a3e1c962320f1acc12a0e759b",
             "name": "List Customers",
             "url": "http:\/\/ssapi.shipstation.com\/\/customers?stateCode={stateCode}&countryCode={countryCode}&tagId={tagId}&marketplaceId={marketplaceId}&sortBy={sortBy}&sortDir={sortDir}&page={page}&pageSize={pageSize}",
             "description": "Obtains a list of customers that match the specified criteria.",
@@ -302,11 +302,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "b7c2b28b01b4629c40bc9d905e00c736",
+            "id": "ec04144965439f2081e0d807518b192d",
             "name": "List Fulfillments w\/o parameters",
             "url": "http:\/\/ssapi.shipstation.com\/\/fulfillments",
             "description": "",
@@ -325,11 +325,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "29963b7d47cc31bd98a3de714ba91f65",
+            "id": "38b57b4a65ab392ea92cf34a6ec1cb40",
             "name": "List Fulfillments with parameters",
             "url": "http:\/\/ssapi.shipstation.com\/\/fulfillments?fulfillmentId={fulfillmentId}&orderId={orderId}&orderNumber={orderNumber}&trackingNumber={trackingNumber}&recipientName={recipientName}&createDateStart={createDateStart}&createDateEnd={createDateEnd}&shipDateStart={shipDateStart}&shipDateEnd={shipDateEnd}&sortBy={sortBy}&sortDir={sortDir}&page={page}&pageSize={pageSize}",
             "description": "Obtains a list of fulfillments that match the specified criteria.  Please note the following:\n\n- Orders that have been marked as shipped either through the UI or the API will appear in the response as they are considered fulfillments.\n\nAll of the available filters are optional.  They do not need to be included in the URL.  If you do include them, here's what the URL may look like:\n\nUrl format with filters:\n\n```\nfulfillments?fulfillmentId={fulfillmentId}\n&orderId={orderId}\n&orderNumber={orderNumb",
@@ -440,11 +440,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "45d5d58e70a85c001963c2cac46d31db",
+            "id": "f86203257cdda58eceae069c38f92260",
             "name": "List Orders w\/o parameters",
             "url": "http:\/\/ssapi.shipstation.com\/\/orders",
             "description": "",
@@ -463,11 +463,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "97767b95475c7e1a04f77e94e7e98abe",
+            "id": "dfd0cf7fadaf4f833fbdce8028add45e",
             "name": "Add Tag to Order",
             "url": "http:\/\/ssapi.shipstation.com\/\/orders\/addtag",
             "description": "Adds a tag to an order.  The body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``orderId`` | number, required | Identifies the order that will be tagged.\n``tagId`` | number, required | Identifies the tag that will be applied to the order.",
@@ -486,11 +486,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "155e8deebd3f2ea9407690afbad1ee5a",
+            "id": "452668b73b5a588eb1a4c8270bd3573f",
             "name": "Assign User to Order",
             "url": "http:\/\/ssapi.shipstation.com\/\/orders\/assignuser",
             "description": "Assigns a user to an order.  The body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``orderIds`` | number, required | Identifies set of orders that will be assigned the user.  Please note that if ANY of the orders within the array are not found, no orders will have a user assigned to them.\n``userId`` | number, required | Identifies the user that will be applied to the order",
@@ -509,11 +509,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "0becdb8ef153716f98f45d24afd4ee4a",
+            "id": "6030a83ad031ec2bb033aecb8e188948",
             "name": "Create Label for Order",
             "url": "http:\/\/ssapi.shipstation.com\/\/orders\/createlabelfororder",
             "description": "Creates a shipping label for a given order.  The ``labelData`` field returned in the response is a base64 encoded PDF value. Simply decode and save the output as a PDF file to retrieve a printable label.  The body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``orderId`` | number, required | Identifies the order that will be shipped.\n``carrierCode`` | string, required | The",
@@ -532,11 +532,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "5acddffa65c5d6461ef637fb8403c015",
+            "id": "1b1173aded41961a33f6db621ecfcc60",
             "name": "Create\/Update Order",
             "url": "http:\/\/ssapi.shipstation.com\/\/orders\/createorder",
             "description": "If the ``orderKey`` is specified, the method becomes idempotent and the existing order with that key will be updated. Note: Only orders in an open status in ShipStation (``awaiting_payment``,``awaiting_shipment``, and ``on_hold``) can be updated through this method. ``cancelled`` and ``shipped`` are locked from modification through the API.  The body of this request should specify an [**Order**](https:\/\/www.shipstation.com\/developer-api\/#\/reference\/model-order) object:\n\nName               |Data ",
@@ -555,11 +555,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "4ddb5a8122b413635b06a59801c0c355",
+            "id": "6d897b9437592c9363744edec494c917",
             "name": "Create\/Update Multiple Orders",
             "url": "http:\/\/ssapi.shipstation.com\/\/orders\/createorders",
             "description": "This endpoint can be used to create or update multiple orders in one request. If the ``orderKey`` is specified in an order, the existing order with that key will be updated. Note: Only orders in an open status in ShipStation (``awaiting_payment``,``awaiting_shipment``, and ``on_hold``) can be updated through this method. ``cancelled`` and ``shipped`` are locked from modification through the API.\n\nData Type          |Description\n-------------------|-------------------\nOrder, required | An array o",
@@ -578,11 +578,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "f8d90e256584033a23e1a88d9024986d",
+            "id": "9118f41fb75e9e6e71529eea55541054",
             "name": "Hold Order Until",
             "url": "http:\/\/ssapi.shipstation.com\/\/orders\/holduntil",
             "description": "This method will change the status of the given order to On Hold until the date specified, when the status will automatically change to Awaiting Shipment.\n\nThe body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``orderId`` | number, required | Identifies the order that will be held.\n``holdUntilDate`` | string, required | Date when order is moved from ``on_hold`` status to `",
@@ -601,11 +601,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "9a10ddc9c0745a4cb2d926a68932faea",
+            "id": "4214143dfce23bb87c12e4312549bb4b",
             "name": "List Orders by Tag",
             "url": "http:\/\/ssapi.shipstation.com\/\/orders\/listbytag?orderStatus={orderStatus}&tagId={tagId}&page={page}&pageSize={pageSize}",
             "description": "Lists all orders that match the specified status and tag ID.\n\nUrl format with filters:\n\n```\n\/listbytag?orderStatus={orderStatus}\n&tagId={tagId}\n&page={page}\n&pageSize={pageSize}\n```",
@@ -653,11 +653,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "fb1cc558c2993baf664539ce4b5ce233",
+            "id": "752bfdc46a12b3945349f5d06c430781",
             "name": "Mark an Order as Shipped",
             "url": "http:\/\/ssapi.shipstation.com\/\/orders\/markasshipped",
             "description": "Marks an order as shipped without creating a label in ShipStation. The body of this request has the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n ``orderId`` | number, required | Identifies the order that will be marked as shipped.\n ``carrierCode`` | string, required | Code of the carrier that is marked as having shipped the order.\n ``shipDate`` | string, optional | Date order was shipped.\n ``trackingNumber",
@@ -676,11 +676,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "3884915c6c1871c9db30c7f41fe158fa",
+            "id": "5fec93e35a0a337f49ff550743d148b6",
             "name": "Remove Tag from Order",
             "url": "http:\/\/ssapi.shipstation.com\/\/orders\/removetag",
             "description": "Removes a tag from the specified order.  The body of this request has the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``orderId`` | number, required | Identifies the order whose tag will be removed.\n``tagId`` | number, required | Identifies the tag to remove.",
@@ -699,11 +699,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "c4319e17ee186e7fa5c9f18a55fa5668",
+            "id": "b8200ec267d3b8d9025125f85f4a61bf",
             "name": "Restore Order from On Hold",
             "url": "http:\/\/ssapi.shipstation.com\/\/orders\/restorefromhold",
             "description": "This method will change the status of the given order from On Hold to Awaiting Shipment. This endpoint is used when a holdUntil Date is attached to an order.\n\nThe body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``orderId`` | number, required | Identifies the order that will be restored to ``awaiting_shipment`` from ``on_hold``.",
@@ -722,11 +722,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "f47831275bfabd2a89be0090a4cdea27",
+            "id": "6f181cb11aaf00a08786fea5097e11c9",
             "name": "Unassign User from Order",
             "url": "http:\/\/ssapi.shipstation.com\/\/orders\/unassignuser",
             "description": "Unassigns a user from an order.  The body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``orderIds`` | number, required | Identifies set of orders that will have the user unassigned.  Please note that if ANY of the orders within the array are not found, then no orders will have their users unassigned.",
@@ -745,11 +745,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "49d385eaccd382dea7b2b5b8b006ce8f",
+            "id": "75d2648123ce0bce2b925df6fd375463",
             "name": "Delete Order",
             "url": "http:\/\/ssapi.shipstation.com\/\/orders\/{orderId}",
             "description": "Removes order from ShipStation's UI. Note this is a \"soft\" delete action so the order will still exist in the database, but will be set to ``inactive``",
@@ -776,11 +776,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "a04b16946d6c6fc46e86090b620abc10",
+            "id": "f2dde3d3f4da6e4501a25be01b41fc0a",
             "name": "Get Order",
             "url": "http:\/\/ssapi.shipstation.com\/\/orders\/{orderId}",
             "description": "Retrieves a single order from the database.",
@@ -807,11 +807,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "efe27ef588a11442b6aaf17986eb0934",
+            "id": "35f2ac6ab5a536b7923e3b504ce42585",
             "name": "List Orders with parameters",
             "url": "http:\/\/ssapi.shipstation.com\/\/orders?customerName={customerName}&itemKeyword={itemKeyword}&createDateStart={createDateStart}&createDateEnd={createDateEnd}&modifyDateStart={modifyDateStart}&modifyDateEnd={modifyDateEnd}&orderDateStart={orderDateStart}&orderDateEnd={orderDateEnd}&orderNumber={orderNumber}&orderStatus={orderStatus}&paymentDateStart={paymentDateStart}&paymentDateEnd={paymentDateEnd}&storeId={storeId}&sortBy={sortBy}&sortDir={sortDir}&page={page}&pageSize={pageSize}",
             "description": "Obtains a list of orders that match the specified criteria.  All of the available filters are optional.  They do not need to be included in the URL.  If you do include them, here's what the URL may look like:\n\nUrl format with filters:\n\n```\n\/orders?customerName={customerName}\n&itemKeyword={itemKeyword}\n&createDateStart={createDateStart}\n&createDateEnd={createDateEnd}\n&modifyDateStart={modifyDateStart}\n&modifyDateEnd={modifyDateEnd}\n&orderDateStart={orderDateStart}\n&orderDateEnd={orderDateEnd}\n&or",
@@ -950,11 +950,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "a93f37a33fc85ec96d7d0518684c0140",
+            "id": "ff7b4435622ebf0c0dc412dc8f465827",
             "name": "List Products w\/o parameters",
             "url": "http:\/\/ssapi.shipstation.com\/\/products",
             "description": "",
@@ -973,11 +973,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "70266e452d4be4a1c934d7af387fe005",
+            "id": "23f72a259fcb46c4309ae85f198ba9c8",
             "name": "Get Product",
             "url": "http:\/\/ssapi.shipstation.com\/\/products\/{productId}",
             "description": "",
@@ -1004,11 +1004,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "d38fb019e7ec02a932bf5b504b90627e",
+            "id": "829bb6625c54242fc743091e7b0eb7ae",
             "name": "Update Product",
             "url": "http:\/\/ssapi.shipstation.com\/\/products\/{productId}",
             "description": "Updates an existing product. This call does not currently support partial updates. The entire resource must be provided in the body of the request.",
@@ -1035,11 +1035,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "8b656b7fa050491415a12370b3938b28",
+            "id": "75da7e7d1fe578470f0b6d69735fbfae",
             "name": "List Products with parameters",
             "url": "http:\/\/ssapi.shipstation.com\/\/products?sku={sku}&name={name}&productCategoryId={productCategoryId}&productTypeId={productTypeId}&tagId={tagId}&startDate={startDate}&endDate={endDate}&showInactive={showInactive}&sortBy={sortBy}&sortDir={sortDir}&page={page}&pageSize={pageSize}",
             "description": "Obtains a list of products that match the specified criteria.  All of the available filters are optional.  They do not need to be included in the URL.  If you do include them, here's what the URL may look like:\n\nUrl format with filters:\n\n```\n\/products?sku={sku}\n&name={name}\n&productCategoryId={productCategoryId}\n&productTypeId={productTypeId}\n&tagId={tagId}\n&startDate={startDate}\n&endDate={endDate}\n&showInactive={showInactive}\n&sortBy={sortBy}\n&sortDir={sortDir}\n&page={page}\n&pageSize={pageSize}",
@@ -1143,11 +1143,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "5cba62c0109f6f40476a3039f7b57758",
+            "id": "c7d3c4b1490ef9959438275d2f4e07f6",
             "name": "List Shipments w\/o parameters",
             "url": "http:\/\/ssapi.shipstation.com\/\/shipments",
             "description": "",
@@ -1166,11 +1166,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "17193b1a5f7661a7a47054b1642b74f0",
+            "id": "c5fd9039158537c38c867958ba6a3564",
             "name": "Create Shipment Label",
             "url": "http:\/\/ssapi.shipstation.com\/\/shipments\/createlabel",
             "description": "Creates a shipping label.  The ``labelData`` field returned in the response is a base64 encoded PDF value. Simply decode and save the output as a PDF file to retrieve a printable label.  The body of this request has the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n ``carrierCode`` | string, required | Identifies the carrier to be used for this label.\n ``serviceCode`` | string, required | Identifies the ship",
@@ -1189,11 +1189,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "afe5e27e7fec857b935f8248418e2aa0",
+            "id": "9819a2c654f99d658636a7a69a7eed69",
             "name": "Get Rates",
             "url": "http:\/\/ssapi.shipstation.com\/\/shipments\/getrates",
             "description": "Retrieves shipping rates for the specified shipping details.  The body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n ``carrierCode`` | string, required | Returns rates for the specified carrier.\n ``serviceCode`` | string, optional | Returns rates for the specified shipping service.\n ``packageCode`` | string, optional | Returns rates for the specified package type.\n ``fromP",
@@ -1212,11 +1212,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "653098a1f1ebb952707ab129f1ceb3db",
+            "id": "dce753790d3096c370cebfd0b0399413",
             "name": "Void Label",
             "url": "http:\/\/ssapi.shipstation.com\/\/shipments\/voidlabel",
             "description": "Voids the specified label by shipmentId.  The body of this request should specify the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n ``shipmentId`` | number, required | ID of the shipment to void.",
@@ -1235,11 +1235,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "357a13522e4b841cc51e8afd926370da",
+            "id": "d17b0defff18b42cb4a92849002d3a88",
             "name": "List Shipments with parameters",
             "url": "http:\/\/ssapi.shipstation.com\/\/shipments?recipientName={recipientName}&recipientCountryCode={recipientCountryCode}&orderNumber={orderNumber}&orderId={orderId}&carrierCode={carrierCode}&serviceCode={serviceCode}&trackingNumber={trackingNumber}&createDateStart={createDateStart}&createDateEnd={createDateEnd}&shipDateStart={shipDateStart}&shipDateEnd={shipDateEnd}&voidDateStart={voidDateStart}&voidDateEnd={voidDateEnd}&includeShipmentItems={includeShipmentItems}&sortBy={sortBy}&sortDir={sortDir}&page={page}&pageSize={pageSize}",
             "description": "Obtains a list of shipments that match the specified criteria.  Please note the following:\n\n- Only valid shipments with labels generated in ShipStation will be returned in the response. Orders that have been marked as shipped either through the UI or the API will not appear as they are considered external shipments.\n\n- To include every shipment's associated shipmentItems in the response, be sure to set the `includeShipmentItems` parameter to `true`.\n\nAll of the available filters are optional.  T",
@@ -1385,11 +1385,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "6a6a9db9181947a5836d9dafe000f3de",
+            "id": "fd2902a61828bd0dc3d502782b62fdd1",
             "name": "Deactivate Store",
             "url": "http:\/\/ssapi.shipstation.com\/\/stores\/deactivate",
             "description": "Deactivates the specified store.\n\nThe body of this request has the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``storeId``  | number, required | ID of the store to deactivate.",
@@ -1408,11 +1408,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "91b1535f3a6ad54fba341da148a950e1",
+            "id": "0ba0b508b596e36d9aefb2a9465579ec",
             "name": "Get Store Refresh Status",
             "url": "http:\/\/ssapi.shipstation.com\/\/stores\/getrefreshstatus?storeId={storeId}",
             "description": "Retrieves the refresh status of a given store.",
@@ -1439,11 +1439,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "12db7ba2355a2c5b773db9d602b16207",
+            "id": "8e2c9b5bbf982ed64d1e8aa14748f212",
             "name": "List Marketplaces",
             "url": "http:\/\/ssapi.shipstation.com\/\/stores\/marketplaces",
             "description": "Lists the marketplaces that can be integrated with ShipStation.",
@@ -1462,11 +1462,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "cdfc50db3e599a4b3be6da742445147f",
+            "id": "548ef39d817a99efd33c30a42789de6e",
             "name": "Reactivate Store",
             "url": "http:\/\/ssapi.shipstation.com\/\/stores\/reactivate",
             "description": "Reactivates the specified store. Note: stores are active by default\n\nThe body of this request has the following attributes:\n\nName               |Data Type          |Description\n-------------------|-------------------|-------------------\n``storeId``  | number, required | ID of the store to reactivate.",
@@ -1485,11 +1485,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "d0488cc2798eba66cc5d8a16c8b98229",
+            "id": "df07308792349171ab900c66ac872014",
             "name": "Refresh Store",
             "url": "http:\/\/ssapi.shipstation.com\/\/stores\/refreshstore?storeId={storeId}&refreshDate={refreshDate}",
             "description": "Initiates a store refresh.",
@@ -1523,11 +1523,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "fd9fb7449044500527a7bfce614a9573",
+            "id": "e6ff244d80c128e349f8a05a4c5bb884",
             "name": "Get Store",
             "url": "http:\/\/ssapi.shipstation.com\/\/stores\/{storeId}",
             "description": "",
@@ -1554,11 +1554,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         },
         {
-            "id": "fb18e3ae8e84042d0ab9c68ca11a75fc",
+            "id": "8d8c5e6fed818cb4fc9263623e2dd514",
             "name": "Update Store",
             "url": "http:\/\/ssapi.shipstation.com\/\/stores\/{storeId}",
             "description": "Updates an existing store. This call does not currently support partial updates. The entire resource must be provided in the body of the request.",
@@ -1585,7 +1585,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3954baf8483cf1d18ace7cf092be39fe",
+            "collectionId": "5690bbd8cae5b0b3013909b03bc2a4a6",
             "rawModeData": ""
         }
     ]
